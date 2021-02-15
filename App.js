@@ -10,7 +10,17 @@ const Drawer = createDrawerNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Home">
+      <Drawer.Navigator 
+        initialRouteName="Home"
+        drawerContentOptions={{
+          activeTintColor: 'white',
+          inactiveTintColor: 'white',
+          labelStyle: { fontSize: 18 },
+        }}
+        drawerStyle={{
+          backgroundColor: '#400040',
+        }}
+      >
         <Drawer.Screen name="Home" component={Screens.Home} />
         <Drawer.Screen name="Defesa pessoal" component={Screens.Defesa_pessoal} />
         <Drawer.Screen name="Nome social" component={Screens.Nome_social} />
