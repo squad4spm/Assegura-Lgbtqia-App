@@ -1,50 +1,49 @@
 import React from 'react';
 import { StyleSheet, Text, ScrollView, TouchableOpacity, Image, View } from 'react-native';
 
-export default function Home() {
+export default function Home({ navigation }) {
   return (
     
     <ScrollView style={styles.container}>
-      <Text>Home</Text>
 
       <View style={styles.ContRow}>
-        <TouchableOpacity style={styles.cardDefesa} >
+        <TouchableOpacity style={styles.cardDefesa} onPress={() => navigation.navigate('Defesa pessoal')} >
           <Image style={styles.icons} source={require('../../assets/images/selfDefense.png')} />
           <Text>Defesa pessoal</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.cardNome}>
+        <TouchableOpacity style={styles.cardNome} onPress={() => navigation.navigate('Nome social')} >
           <Image style={styles.icons} source={require('../../assets/images/doc.png')} />
           <Text>Nome social</Text>
         </TouchableOpacity>
       </View>
 
       <View style={styles.ContRow}>
-        <TouchableOpacity style={styles.cardLocalizacao}>
+        <TouchableOpacity style={styles.cardLocalizacao} onPress={() => navigation.navigate('Localizações')} >
           <Image style={styles.icons} source={require('../../assets/images/map.png')} />
           <Text>Localizações</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.cardAjude}>
+        <TouchableOpacity style={styles.cardAjude} onPress={() => navigation.navigate('Ajude')} >
           <Image style={styles.icons} source={require('../../assets/images/shake.png')} />
           <Text>Ajude</Text>
         </TouchableOpacity>
       </View>
 
       <View style={styles.ContRow}>
-        <TouchableOpacity style={styles.cardCasa}>
+        <TouchableOpacity style={styles.cardCasa} onPress={() => navigation.navigate('Casas de acolhimento')} >
           <Image style={styles.icons} source={require('../../assets/images/house.png')} />
           <Text>Casas de acolhimento</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.cardDireito}>
+        <TouchableOpacity style={styles.cardDireito} onPress={() => navigation.navigate('Direitos LGBTQIA+')} >
           <Image style={styles.icons} source={require('../../assets/images/law.png')} />
           <Text>Direitos LGBTQIA+</Text>
         </TouchableOpacity>
       </View>
 
       <View style={styles.ContRow}>
-        <TouchableOpacity style={styles.cardAjudaP}>
+        <TouchableOpacity style={styles.cardAjudaP} onPress={() => navigation.navigate('Ajuda psicológica')} >
           <Image style={styles.icons} source={require('../../assets/images/psicologhy.png')} />
           <Text>Ajuda psicológica</Text>
         </TouchableOpacity>
