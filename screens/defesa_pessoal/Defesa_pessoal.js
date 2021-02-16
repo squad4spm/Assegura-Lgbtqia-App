@@ -1,11 +1,57 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, ScrollView, View, Image, TouchableOpacity, Linking } from 'react-native';
 
 export default function Defesa_pessoal() {
   return (
-    <View style={styles.container}>
-      <Text>Defesa Pessoal</Text>
-    </View>
+    <ScrollView style={styles.container}>
+      <Image
+        style={styles.banner}
+        source={require('../../assets/images/defesa_pessoal/faixa.jpg')}
+      />
+
+      <View style={styles.section1}>
+        <Text style={styles.text}>Muitas pessoas LGBTQIA+ no centro de São Paulo precisam de apoio, para se defender de violências sofridas. Mas muitas dessas pessoas não conseguem acessar esse tipo serviço. Seja por falta de grana, por falta de um serviço personalizado, falta de tempo ou até mesmo falta de acesso à informação.</Text>
+        <Text style={styles.textStrong}>Por isso criamos o Assegura LGBTQIA+</Text>
+        <Image style={styles.banner} source={require('../../assets/images/defesa_pessoal/Defesa.png')} />
+      </View>
+
+      <View style={styles.section2}>
+        <Text style={styles.text}>Por isso, vamos através de Informações e Parcerias com Professores e Escolas de Defesa Pessoal, conectar quem precisa de acesso a esse serviço com Profissionais e Ambientes seguro, livre de assédio, livre de discriminações, em que as pessoas possam desenvolver suas potencialidades em um clima de respeito, amizade e colaboração, buscando assegurar a comunidade LGBTQIA+.
+        Nosso diferencial, é que além de promover essa conexão, também vamos disponibilizar na nossa plataforma, vídeos com aulas básicas gratuitas.</Text>
+        <Image style={styles.banner} source={require('../../assets/images/defesa_pessoal/Defesa_Pessoal.png')} />
+        <Text style={styles.text}>Pesquisas mostram que pessoas treinadas para responder adequadamente a um ataque, podem até mesmo impedir que agressões aconteçam, pois, reagem ao perigo de forma mais assertiva e confiante, aumentando as chances de evitar situações violentas ou enfrentá-las com segurança.</Text>
+      </View>
+
+      <View style={styles.section1}>
+        <Text style={styles.text}>Você que é alvo de violência deve saber se defender, isto é empoderamento, é ser livre,
+        é não viver refém do medo.</Text>
+        <Text style={styles.textStrong}>Vídeos com Aulas de Defesa Pessoal</Text>
+      </View>
+
+      <View style={styles.section3}>
+        <Text style={styles.textStrongA}>Artigos sobre Defesa Pessoal</Text>
+        
+        <TouchableOpacity style={styles.cardArtigos} onPress={ ()=>{ Linking.openURL('https://google.com')}} >
+          <Image style={styles.imgArtigos} source={require('../../assets/images/defesa_pessoal/imagemartigotrans.jpg')} />
+          <Text style={styles.textArtigos}>Conheça a primeira Trans faixa-preta ...</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.cardArtigos} onPress={ ()=>{ Linking.openURL('https://google.com')}} >
+          <Image style={styles.imgArtigos} source={require('../../assets/images/defesa_pessoal/defesa5.jpeg')} />
+          <Text style={styles.textArtigos}>“Qualquer um pode ser uma ameaça” ...</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.cardArtigos} onPress={ ()=>{ Linking.openURL('https://google.com')}} >
+          <Image style={styles.imgArtigos} source={require('../../assets/images/defesa_pessoal/defesa2.png')} />
+          <Text style={styles.textArtigos}>“Sem ver diferenças” ...</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.cardArtigos} onPress={ ()=>{ Linking.openURL('https://google.com')}} >
+          <Image style={styles.imgArtigos} source={require('../../assets/images/defesa_pessoal/defesa4.png')} />
+          <Text style={styles.textArtigos}>Turmas de Defesa-Pessoal para LGBTs ...</Text>
+        </TouchableOpacity>
+      </View>
+    </ScrollView>
   );
 }
 
@@ -13,7 +59,55 @@ const styles = StyleSheet.create({
     container: {
       flex: 1,
       backgroundColor: '#fff',
+      textAlign: 'center',
+    },
+    text: {
+      fontSize: 18,
+    },
+    textStrong: {
+      fontSize: 20,
+      fontWeight: 'bold',
+    },
+    textStrongA: {
+      fontSize: 20,
+      fontWeight: 'bold',
+      color: '#fff',
+    },
+    banner: {
+      width: '100%',
+      height: 250,
+    },
+    section1: {
+      marginTop: 20,
+      textAlign: 'center',
+    },
+    section2: {
+      marginTop: 20,
+      textAlign: 'center',
+      backgroundColor: '#FFD5FF',
+    },
+    section3: {
+      marginTop: 20,
+      textAlign: 'center',
+      backgroundColor: '#400040',
+    },
+    cardArtigos: {
+      marginTop: 20,
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      backgroundColor: '#FFD5FF',
+      width: 360,
+      height: 250,
+      borderRadius: 15,
       alignItems: 'center',
-      justifyContent: 'center',
+      justifyContent: 'space-around',
+    },
+    imgArtigos: {
+      width: 300,
+      height: 200,
+    },
+    textArtigos: {
+      fontSize: 18,
+      fontWeight: 'bold',
     },
   });
