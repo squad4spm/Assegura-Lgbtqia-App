@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useState, useCallback } from "react";
 import { StyleSheet, Text, ScrollView, View, Image, TouchableOpacity, Linking } from 'react-native';
+import YoutubePlayer from "react-native-youtube-iframe";
 
 export default function Direitos() {
+
+  const [playing, setPlaying] = useState(false);
+
+  const onStateChange = useCallback((state) => {
+    if (state === "ended") {
+      setPlaying(false);
+      Alert.alert("video has finished playing!");
+    }
+  }, []);
+
   return (
     <ScrollView style={styles.container}>
       <Image
@@ -10,6 +21,8 @@ export default function Direitos() {
       />
 
       <View style={styles.section1}>
+
+      <Text style={styles.textStrong}>Segue artigos abaixo: </Text>
         
         <TouchableOpacity style={styles.cardArtigos} onPress={ ()=>{ Linking.openURL('https://sergioluizbarroso.jusbrasil.com.br/artigos/356606315/um-estabelecimento-ou-uma-empresa-podem-se-recusar-a-fornecer-seus-produtos-e-servicos')}} >
           <Image style={styles.imgArtigos} source={require('../../assets/images/direitos/direitos1.jpg')} />
@@ -44,6 +57,12 @@ export default function Direitos() {
 
       <View style={styles.section1}>
         <Text style={styles.textStrong}>Direitos LGBT+ No Brasil - Assista Vídeo Abaixo</Text>
+        <YoutubePlayer
+          height={300}
+          play={playing}
+          videoId={"FefS4qGbLhs"}
+          onChangeState={onStateChange}
+        />
       </View>
 
       <View style={styles.section3}>

@@ -9,43 +9,43 @@ export default function Home({ navigation }) {
       <View style={styles.ContRow}>
         <TouchableOpacity style={styles.cardDefesa} onPress={() => navigation.navigate('Defesa pessoal')} >
           <Image style={styles.icons} source={require('../../assets/images/selfDefense.png')} />
-          <Text>Defesa pessoal</Text>
+          <Text style={styles.texto} >Defesa pessoal</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.cardNome} onPress={() => navigation.navigate('Nome social')} >
           <Image style={styles.icons} source={require('../../assets/images/doc.png')} />
-          <Text>Nome social</Text>
-        </TouchableOpacity>
-      </View>
-
-      <View style={styles.ContRow}>
-        <TouchableOpacity style={styles.cardLocalizacao} onPress={() => navigation.navigate('Localizações')} >
-          <Image style={styles.icons} source={require('../../assets/images/map.png')} />
-          <Text>Localizações</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.cardAjude} onPress={() => navigation.navigate('Ajude')} >
-          <Image style={styles.icons} source={require('../../assets/images/shake.png')} />
-          <Text>Ajude</Text>
-        </TouchableOpacity>
-      </View>
-
-      <View style={styles.ContRow}>
-        <TouchableOpacity style={styles.cardCasa} onPress={() => navigation.navigate('Casas de acolhimento')} >
-          <Image style={styles.icons} source={require('../../assets/images/house.png')} />
-          <Text>Casas de acolhimento</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.cardDireito} onPress={() => navigation.navigate('Direitos LGBTQIA+')} >
-          <Image style={styles.icons} source={require('../../assets/images/law.png')} />
-          <Text>Direitos LGBTQIA+</Text>
+          <Text style={styles.texto} >Nome social</Text>
         </TouchableOpacity>
       </View>
 
       <View style={styles.ContRow}>
         <TouchableOpacity style={styles.cardAjudaP} onPress={() => navigation.navigate('Ajuda psicológica')} >
           <Image style={styles.icons} source={require('../../assets/images/psicologhy.png')} />
-          <Text>Ajuda psicológica</Text>
+          <Text style={styles.texto} >Ajuda psicológica</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.cardAjude} onPress={() => navigation.navigate('Ajude')} >
+          <Image style={styles.icons} source={require('../../assets/images/shake.png')} />
+          <Text style={styles.texto} >Ajude</Text>
+        </TouchableOpacity>
+      </View>
+
+      <View style={styles.ContRow}>
+        <TouchableOpacity style={styles.cardCasa} onPress={() => navigation.navigate('Casas de acolhimento')} >
+          <Image style={styles.icons} source={require('../../assets/images/house.png')} />
+          <Text style={styles.texto} >Casas de acolhimento</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.cardDireito} onPress={() => navigation.navigate('Direitos LGBTQIA+')} >
+          <Image style={styles.icons} source={require('../../assets/images/law.png')} />
+          <Text style={styles.texto} >Direitos LGBTQIA+</Text>
+        </TouchableOpacity>
+      </View>
+
+      <View style={styles.ContRow}>
+        <TouchableOpacity style={styles.cardLocalizacao} onPress={() => navigation.navigate('Localizações')} >
+          <Image style={styles.icons} source={require('../../assets/images/map.png')} />
+          <Text style={styles.texto} >Localizações</Text>
         </TouchableOpacity>
       </View>
 
@@ -62,6 +62,9 @@ const styles = StyleSheet.create({
     ContRow: {
       flexDirection: 'row',
       justifyContent: 'space-around',
+    },
+    texto: {
+      color: 'black',
     },
     cardDefesa: {
       marginTop: 20,

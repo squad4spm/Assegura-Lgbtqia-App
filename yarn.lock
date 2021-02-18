@@ -2879,6 +2879,11 @@ eventemitter3@^3.0.0:
   resolved "https://registry.npmjs.org/eventemitter3/-/eventemitter3-3.1.2.tgz"
   integrity sha512-tvtQIeLVHjDkJYnzf2dgVMxfuSGJeM/7UCG17TT4EumTfNtF+0nebF/4zWOIkCreAbtNqhGEboB6BWrwqNaw4Q==
 
+events@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/events/-/events-3.2.0.tgz#93b87c18f8efcd4202a461aec4dfc0556b639379"
+  integrity sha512-/46HWwbfCX2xTawVfkKLGxMifJYQBWMwY1mjywRtb4c9x8l5NP3KoJtnIOiL1hfdRkIuYhETxQlo62IF8tcnlg==
+
 exec-sh@^0.3.2:
   version "0.3.4"
   resolved "https://registry.npmjs.org/exec-sh/-/exec-sh-0.3.4.tgz"
@@ -5174,14 +5179,6 @@ react-dom@16.13.1:
     prop-types "^15.6.2"
     scheduler "^0.19.1"
 
-<<<<<<< HEAD
-=======
-react-icons@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.npmjs.org/react-icons/-/react-icons-4.2.0.tgz"
-  integrity sha512-rmzEDFt+AVXRzD7zDE21gcxyBizD/3NqjbX6cmViAgdqfJ2UiLer8927/QhhrXQV7dEj/1EGuOTPp7JnLYVJKQ==
-
->>>>>>> bb5b5dcef9ba5b93785bfc1ab4d8b18f8ae749bb
 react-is@^16.12.0, react-is@^16.13.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4:
   version "16.13.1"
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
@@ -5260,6 +5257,13 @@ react-native-webview@11.0.0:
   dependencies:
     escape-string-regexp "2.0.0"
     invariant "2.2.4"
+
+react-native-youtube-iframe@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/react-native-youtube-iframe/-/react-native-youtube-iframe-1.4.1.tgz#a98d6a2aba4ad5b54e1d1137291a62ec3256d71e"
+  integrity sha512-19a7G47VOrDHc3ABKT10OuXkMsMotX5UcK+dqhC42Kz/NZ1bBx2sf645+Kn2WWOIG+RJB2uJgnIzPMezp4hGZg==
+  dependencies:
+    events "^3.2.0"
 
 react-native-youtube@^2.0.1:
   version "2.0.1"

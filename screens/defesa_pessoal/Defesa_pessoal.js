@@ -1,7 +1,18 @@
-import React from 'react';
-import { StyleSheet, Text, ScrollView, View, Image, TouchableOpacity, Linking } from 'react-native';
+import React, { useState, useCallback } from "react";
+import { StyleSheet, Text, ScrollView, View, Image, TouchableOpacity, Linking, Button } from 'react-native';
+import YoutubePlayer from "react-native-youtube-iframe";
 
 export default function Defesa_pessoal() {
+
+  const [playing, setPlaying] = useState(false);
+
+  const onStateChange = useCallback((state) => {
+    if (state === "ended") {
+      setPlaying(false);
+      Alert.alert("video has finished playing!");
+    }
+  }, []);
+
   return (
     <ScrollView style={styles.container}>
       <Image
@@ -26,6 +37,19 @@ export default function Defesa_pessoal() {
         <Text style={styles.text}>Você que é alvo de violência deve saber se defender, isto é empoderamento, é ser livre,
         é não viver refém do medo.</Text>
         <Text style={styles.textStrong}>Vídeos com Aulas de Defesa Pessoal</Text>
+        <YoutubePlayer
+          height={300}
+          play={playing}
+          videoId={"HF8NxF1QYh0"}
+          onChangeState={onStateChange}
+        />
+
+        <YoutubePlayer
+          height={300}
+          play={playing}
+          videoId={"kxnjvWnpnxQ"}
+          onChangeState={onStateChange}
+        />
       </View>
 
       <View style={styles.section3}>
@@ -51,6 +75,7 @@ export default function Defesa_pessoal() {
           <Text style={styles.textArtigos}>Turmas de Defesa-Pessoal para LGBTs ...</Text>
         </TouchableOpacity>
       </View>
+      
     </ScrollView>
   );
 }
@@ -79,6 +104,7 @@ const styles = StyleSheet.create({
       fontSize: 20,
       fontWeight: 'bold',
       color: '#fff',
+      paddingTop: 20,
       paddingBottom: 20,
       paddingRight: 20,
       paddingLeft: 20,
@@ -92,12 +118,11 @@ const styles = StyleSheet.create({
       textAlign: 'center',
     },
     section2: {
-      marginTop: 20,
       textAlign: 'center',
       backgroundColor: '#FFD5FF',
     },
     section3: {
-      marginTop: 20,
+      paddingBottom: 20,
       textAlign: 'center',
       backgroundColor: '#400040',
     },
@@ -119,5 +144,11 @@ const styles = StyleSheet.create({
     textArtigos: {
       fontSize: 18,
       fontWeight: 'bold',
+    },
+    buttonYou: {
+      backgroundColor: '#FFD5FF',
+      width: '100%',
+      height: 20,
+      borderRadius: 15,
     },
   });

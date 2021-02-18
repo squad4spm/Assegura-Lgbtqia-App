@@ -36,8 +36,8 @@ export default function Ajude() {
         <TouchableOpacity style={styles.cardDoar} >
           <Image style={styles.imgArtigos} source={require('../../assets/images/ajude/ajude08.jpg')} />
           <Text style={styles.textArtigos}>Doar Faz Bem</Text>
-          <Text style={styles.text}>Banco Santander Ag - 0000 Cc - 00000-0</Text>
-          <Text style={styles.text}>Banco Itaú Ag - 0000 Cc - 00000-0</Text>
+          <Text style={styles.textCard}>Banco Nubank Ag - 0000 Cc - 00000-0</Text>
+          <Text style={styles.textCard}>Banco Itaú Ag - 0000 Cc - 00000-0</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>
@@ -54,6 +54,12 @@ const styles = StyleSheet.create({
     fontSize: 18,
     paddingTop: 20,
     paddingBottom: 20,
+    paddingRight: 20,
+    paddingLeft: 20,
+  },
+  textCard: {
+    fontSize: 18,
+    paddingBottom: 10,
     paddingRight: 20,
     paddingLeft: 20,
   },
@@ -81,12 +87,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   section2: {
-    marginTop: 20,
     textAlign: 'center',
     backgroundColor: '#FFD5FF',
   },
   section3: {
-    marginTop: 20,
     textAlign: 'center',
     backgroundColor: '#400040',
   },

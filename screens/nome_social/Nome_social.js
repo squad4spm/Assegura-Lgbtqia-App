@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useState, useCallback, useRef } from "react";
 import { StyleSheet, Text, ScrollView, View, Image, TouchableOpacity, Linking } from 'react-native';
+import YoutubePlayer from "react-native-youtube-iframe";
 
 export default function Nome_social() {
+
+  const [playing, setPlaying] = useState(false);
+
+  const onStateChange = useCallback((state) => {
+    if (state === "ended") {
+      setPlaying(false);
+      Alert.alert("video has finished playing!");
+    }
+  }, []);
+
   return (
     <ScrollView style={styles.container}>
       <Image
@@ -22,7 +33,7 @@ export default function Nome_social() {
         </Text>
         <Text style={styles.text}>Preciso fazer a alteração no cartório em que fui registrado?Não. O pedido pode ser realizado em qualquer cartório de Registro Civil de Pessoas Naturais em todo território nacional. O cartório que fizer a alteração deverá encaminhar via sistema eletrônico o procedimento ao cartório que registrou o nascimento da pessoa.
         </Text>
-        <Image style={styles.banner} source={require('../../assets/images/nome_social/imgnomesocial.jpg')} />
+        <Image style={styles.banner2} source={require('../../assets/images/nome_social/imgnomesocial.jpg')} />
         <Text style={styles.text}>É possível solicitar a gratuidade do procedimento?Caso o interessado na mudança não tenha condições de arcar com os custos do procedimento, ele pode solicitar a gratuidade no cartório . Para isso, basta apresentar a declaração de hipossuficiência – documento necessário para obter assistência judiciária gratuita. Caso deseje, o cidadão que deseja realizar as mudanças pode contatar a Defensoria Pública de seu estado para conseguir a gratuidade.
         </Text>
       </View>
@@ -30,6 +41,20 @@ export default function Nome_social() {
       <View style={styles.section1}>
         <Text style={styles.text}>Separamos aqui alguns videos com mais informaçoes sobre o processo</Text>
         <Text style={styles.textStrong}>Vídeos</Text>
+
+        <YoutubePlayer
+          height={300}
+          play={playing}
+          videoId={"3oqztdVbivk"}
+          onChangeState={onStateChange}
+        />
+
+        <YoutubePlayer
+          height={300}
+          play={playing}
+          videoId={"hRD_xTbIgYc"}
+          onChangeState={onStateChange}
+        />
       </View>
 
       <View style={styles.section3}>
@@ -75,6 +100,7 @@ const styles = StyleSheet.create({
   textStrong: {
     fontSize: 20,
     fontWeight: 'bold',
+    paddingTop: 20,
     paddingBottom: 20,
     paddingRight: 20,
     paddingLeft: 20,
@@ -83,6 +109,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     color: '#fff',
+    paddingTop: 20,
     paddingBottom: 20,
     paddingRight: 20,
     paddingLeft: 20,
@@ -91,17 +118,20 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 250,
   },
+  banner2: {
+    width: '100%',
+    height: 300,
+  },
   section1: {
     marginTop: 20,
     textAlign: 'center',
   },
   section2: {
-    marginTop: 20,
     textAlign: 'center',
     backgroundColor: '#FFD5FF',
   },
   section3: {
-    marginTop: 20,
+    paddingBottom:20,
     textAlign: 'center',
     backgroundColor: '#400040',
   },

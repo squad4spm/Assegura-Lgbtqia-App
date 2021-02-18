@@ -80,12 +80,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   section2: {
-    marginTop: 20,
     textAlign: 'center',
     backgroundColor: '#FFD5FF',
   },
   section3: {
-    marginTop: 20,
+    paddingBottom:20,
     textAlign: 'center',
     backgroundColor: '#400040',
   },
