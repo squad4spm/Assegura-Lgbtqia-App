@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
     },
     banner1: {
       width: '100%',
-      height: 200,
+      height: 170,
     },
     section4: {
       alignItems: 'center',

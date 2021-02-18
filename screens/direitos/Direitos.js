@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
   },
   banner: {
     width: '100%',
-    height: 215,
+    height: 200,
   },
   section1: {
     marginTop: 20,
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
     marginRight: 'auto',
     backgroundColor: '#FFD5FF',
     width: 360,
-    height: 250,
+    height: 280,
     borderRadius: 15,
     alignItems: 'center',
     justifyContent: 'space-around',

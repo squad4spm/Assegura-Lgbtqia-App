@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     marginRight: 'auto',
     backgroundColor: '#FFD5FF',
     width: 360,
-    height: 250,
+    height: 280,
     borderRadius: 15,
     alignItems: 'center',
     justifyContent: 'space-around',
