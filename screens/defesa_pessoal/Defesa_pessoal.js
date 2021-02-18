@@ -63,15 +63,25 @@ const styles = StyleSheet.create({
     },
     text: {
       fontSize: 18,
+      paddingTop: 20,
+      paddingBottom: 20,
+      paddingRight: 20,
+      paddingLeft: 20,
     },
     textStrong: {
       fontSize: 20,
       fontWeight: 'bold',
+      paddingBottom: 20,
+      paddingRight: 20,
+      paddingLeft: 20,
     },
     textStrongA: {
       fontSize: 20,
       fontWeight: 'bold',
       color: '#fff',
+      paddingBottom: 20,
+      paddingRight: 20,
+      paddingLeft: 20,
     },
     banner: {
       width: '100%',
