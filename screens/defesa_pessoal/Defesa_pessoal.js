@@ -55,22 +55,22 @@ export default function Defesa_pessoal() {
       <View style={styles.section3}>
         <Text style={styles.textStrongA}>Artigos sobre Defesa Pessoal</Text>
         
-        <TouchableOpacity style={styles.cardArtigos} onPress={ ()=>{ Linking.openURL('https://google.com')}} >
+        <TouchableOpacity style={styles.cardArtigos} onPress={ ()=>{ Linking.openURL('https://www.bjjee.com/articles/meet-the-first-ever-transgender-brazilian-jiu-jitsu-black-belt/')}} >
           <Image style={styles.imgArtigos} source={require('../../assets/images/defesa_pessoal/imagemartigotrans.jpg')} />
           <Text style={styles.textArtigos}>Conheça a primeira Trans faixa-preta ...</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.cardArtigos} onPress={ ()=>{ Linking.openURL('https://google.com')}} >
+        <TouchableOpacity style={styles.cardArtigos} onPress={ ()=>{ Linking.openURL('https://www.bjjee.com/articles/bjj-instructor-introduces-rainbow-belt-to-show-support-for-gay-rights/')}} >
           <Image style={styles.imgArtigos} source={require('../../assets/images/defesa_pessoal/defesa5.jpeg')} />
-          <Text style={styles.textArtigos}>“Qualquer um pode ser uma ameaça” ...</Text>
+          <Text style={styles.textArtigos}>“Cinto arco-íris” ...</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.cardArtigos} onPress={ ()=>{ Linking.openURL('https://google.com')}} >
+        <TouchableOpacity style={styles.cardArtigos} onPress={ ()=>{ Linking.openURL('https://kajaswords.com/2019/09/11/not-seeing-difference/')}} >
           <Image style={styles.imgArtigos} source={require('../../assets/images/defesa_pessoal/defesa2.png')} />
           <Text style={styles.textArtigos}>“Sem ver diferenças” ...</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.cardArtigos} onPress={ ()=>{ Linking.openURL('https://google.com')}} >
+        <TouchableOpacity style={styles.cardArtigos} onPress={ ()=>{ Linking.openURL('https://www.wesa.fm/post/lgbtq-self-defense-class-focuses-empowerment?fbclid=IwAR0ELMKP_bhXKnFDPNrTU#stream/0')}} >
           <Image style={styles.imgArtigos} source={require('../../assets/images/defesa_pessoal/defesa4.png')} />
           <Text style={styles.textArtigos}>Turmas de Defesa-Pessoal para LGBTs ...</Text>
         </TouchableOpacity>
